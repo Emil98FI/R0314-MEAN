@@ -1,31 +1,24 @@
-  
-var http=require('http');
+var http = require("http");
 
-var server=http.createServer(function(req,res){
-    
-    res.writeHead(200, {'Content-Type': 'text/html'})
-    
-    var url = req.url; 
-      
-    if(url ==='/about') { 
-        res.write(' Welcome to about us page');  
-        res.end();  
-    } 
-    else if(url ==='/contact') { 
-        res.write(' Welcome to contact us page');  
-        res.end();  
-    } 
-    else { 
-        res.write('Hello World!');  
-        res.end();  
-    } 
+var server = http.createServer(function(req, res) {
+  res.writeHead(200, { "Content-Type": "text/html" });
 
+  var url = req.url;
 
-
+  if (url === "/about") {
+    res.write(" Welcome to about us page");
+    res.end();
+  } else if (url === "/contact") {
+    res.write(" Welcome to contact us page");
+    res.end();
+  } else {
+    res.write("Hello World! Everyone");
+    res.end();
+  }
 });
 
-server.on('listening',function(){
-    console.log('ok, server is running');
+server.on("listening", function() {
+  console.log("ok, server is running");
 });
 
 server.listen(3001);
