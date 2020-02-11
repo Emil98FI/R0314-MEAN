@@ -1,7 +1,7 @@
 var fs = require("fs");
 
 console.log("Program started");
-var data = fs.readFileSync("example.txt");
+var data = fs.readFileSync("example.txt", "utf8");
 console.log(data.toString());
 
 for (var i = 0; i < 15; i++) {
