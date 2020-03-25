@@ -13,6 +13,13 @@ app.get('/', function(req, res) {
 	});
 });
 
+var data = {
+	users: [ { name: 'John', Age: 52 }, { name: 'Mike', Age: 42 }, { name: 'Smantha' } ]
+};
+
+app.get('/users', function(req, res) {
+	res.render('pages/users', data);
+});
 app.listen(8081);
 
 console.log('8081 is the magic port');

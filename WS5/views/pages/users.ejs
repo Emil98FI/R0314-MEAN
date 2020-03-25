@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    // <%- include("partials/head") %>
+</head>
+
+
+
+    <header>
+        <%- include('partials/header') %>
+    </header>
+    <main>
+        <div class="jumbotron">
+            
+            <table>
+
+
+                
+                <% users.forEach(function (user) { %>
+                
+                 <tr><td><%=user.name%></td> 
+                    <td><%=user.Age%></td>    
+                    
+                    
+                    </tr>
+                    
+                <%});%>
+
+
+
+
+            </table>
+
+
+        </div>
+    </main>
+
+    <footer>
+        <%- include('partials/footer') %>
+    </footer>
+</body>
